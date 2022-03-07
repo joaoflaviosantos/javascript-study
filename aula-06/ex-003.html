@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Exercício 03</title>
+    <style>
+        body{
+            background-color: rgb(104, 104, 180);
+            color: rgb(241, 241, 241); /* Comentário em CSS */
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Olá Mundo!</h1>
+    <p>Já me livrei da maldição. =)</p>
+
+    <script>
+
+        // Comentário de 1 linha
+        /*
+        window.alert('Minha primeira mensasgem!')
+        window.confirm('Você está gostando de JS?') // Janela com botão de Ok e Cancelar
+        */
+
+        // var n1 = window.prompt('Digite um número: ') // String
+        // var n2 = window.prompt('Digite outro número: ') // String
+        // var s = Number.parseInt(n1) + Number.parseInt(n2) // Number.parseInt(n) ou Number.parseFloat(n)
+        
+        //var n1 =  Number.parseFloat(window.prompt('Digite um número: ')) // Convertendo String para Float
+        //var n2 =  Number.parseFloat(window.prompt('Digite outro número: ')) // Convertendo String para Float
+        //var s = n1 + n2
+
+        var n1 =  Number(window.prompt('Digite um número: ')) // Convertendo String para Float
+        var n2 =  Number(window.prompt('Digite outro número: ')) // Convertendo String para Float
+        var s = n1 + n2
+        
+        //window.alert('A soma dos valores é ' + s + '.') // Concatenação
+        window.alert(`A soma dos valores é ${s}`) // Template String
+        // (number + number) para adição
+        // (string + string) para concatenação 
+        // prompt sempre retorna string idem input do Python
+
+        // Converter Number para String --> String(n) n.toString()
+
+    </script>
+</body>
+</html>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 05 - Exemplo 01</title>
+    <title>Aula 06 - Exercício 02</title>
     <style>
         body{
             background-color: rgb(104, 104, 180);
-            color: rgb(241, 241, 241);
+            color: rgb(241, 241, 241); /* Comentário em CSS */
             font: normal 20pt Arial;
         }
         h1{
@@ -27,10 +27,9 @@
         /*
         window.alert('Minha primeira mensagem!')
         window.confirm('Você está gostando de JS?') // Janela com botão de Ok e Cancelar
-        window.prompt('Qual é o seu nome?')  // Vai perguntar o nome..
         */
-        
-        
+        var nome = window.prompt('Qual é o seu nome?')  // Vai perguntar o nome..
+        window.alert('Minha variável nome é ' + nome + '.') // Concatenação
 
     </script>
 </body>
