@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09 - Exercício 05</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg_id_1" name="msg_name_1" class="msg_class_1">Clique em mim 01</div>
+    <div id="msg_id_2" name="msg_name_2" class="msg_class_2">Clique em mim 02</div>
+    <div id="msg_id_3" name="msg_name_3" class="msg_class_3">Clique em mim 03</div>
+    <div id="msg_id_4" name="msg_name_4" class="msg_class_4">Clique em mim 04</div>
+
+    <script>
+        document.write('<br>')
+        window.document.write('<hr>')
+        window.document.write('<h4>Exemplos básicos de acesso aos elementos do DOM</h4>')
+        window.document.write(window.document.charset)
+        window.document.write('<br>')
+        window.document.write(window.navigator.appName)
+        window.document.write('<br>')
+        window.document.write(window.navigator.hardwareConcurrency)
+        window.document.write('<br>')
+        window.document.write(window.document.URL)
+        window.document.write('<br>')
+        window.document.write(window.location)
+        window.document.write('<br>')
+        window.document.write(window.document.activeElement.id)
+        window.document.write('<br>')
+        window.document.write(window.document.domain)
+        window.document.write('<br>')
+        window.document.write(window.document.body)
+        window.document.write('<br>')
+        window.document.write(window.document.head)
+    </script>
+
+    <script>
+        // Na prática não é necessário utilizar o "window"
+        document.write('<br>')
+        document.write('<hr>')
+        document.write('<h4>Acessando elementos DOM por Marca/TagName</h4>')
+        var p1 = document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        document.write('No parágrafo 1 deste arquivo HTML está escrito: ' + p1.innerText)
+        document.write('<br>')
+        var p2 = document.getElementsByTagName('p')[1]
+        p2.style.color = 'purple'
+        document.write('No parágrafo 2 deste arquivo HTML está escrito: ' + p2.innerHTML)
+        document.write('<br>')
+        var corpo = document.body
+        corpo.style.background = 'rgb(68, 125, 255)'
+        //alert(p2.innerHTML)
+        //alert(p2.innerText)
+        document.write('<hr>')
+        document.write('<h4>Acessando elementos DOM por Id</h4>')
+        var d1 = document.getElementById('msg_id_1')
+        d1.style.background = 'green'
+        document.write(d1.innerHTML)
+        d1.innerText = 'Antes esse texto era "Clique em mim 01".'
+        //document.getElementById('msg_id_1').innerText = 'Antes esse texto era "Clique em mim".'
+        document.write('<br>')
+        document.write('<hr>')
+        document.write('<h4>Acessando elementos DOM por Name</h4>')
+        var n1 = document.getElementsByName('msg_name_2')[0]
+        n1.style.background = 'purple'
+        document.write(n1.innerHTML)
+        n1.innerText = 'Antes esse texto era "Clique em mim 02".'
+        //document.getElementsByName('msg_name_2')[0].innerText = 'Antes esse texto era "Clique em mim".'
+        document.write('<br>')
+        document.write('<hr>')
+        document.write('<h4>Acessando elementos DOM por ClassName</h4>')
+        var c1 = document.getElementsByClassName('msg_class_3')[0]
+        c1.style.background = 'red'
+        document.write(c1.innerHTML)
+        c1.innerText = 'Antes esse texto era "Clique em mim 03".'
+        //document.getElementsByClassName('msg_class_3')[0].innerText = 'Antes esse texto era "Clique em mim".'
+        document.write('<br>')
+        document.write('<hr>')
+        document.write('<h4>Acessando elementos DOM por QuerySelector</h4>')
+        //var q1 = document.querySelector('div#msg_id_4') // acessando por id "#"
+        var q1 = document.querySelector('div.msg_class_4') // acessando por class "."
+        q1.style.background = 'black'
+        document.write(q1.innerHTML)
+        q1.innerText = 'Antes esse texto era "Clique em mim 04".'
+        //document.getElementsByClassName('msg_class_3')[0].innerText = 'Antes esse texto era "Clique em mim".'
+        document.write('<br>')
+    </script>
+    
+</body>
+</html>
