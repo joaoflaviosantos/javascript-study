@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#area_2{
+            font: normal 20pt Arial;
+            background-color: red;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area" onmouseenter="entrar()" onmouseout="sair()" onClick="clicar()">
+        Interaja...
+    </div>
+    
+        <br>
+
+    <div id="area_2">
+        Interaja...
+    </div>
+
+    <script>
+
+        var area = document.getElementById('area') // tirar da função para maximar o uso de memória (variável global)
+
+        function clicar(){
+            // Comentários
+            //var area = document.getElementById('area')
+            area.style.background = 'red'
+            area.innerText = 'Clicou!'
+        }
+
+        function entrar(){
+            //var area = document.getElementById('area')
+            area.style.background = 'purple'
+            area.innerText = 'Entrou!'
+        }
+    
+        function sair(){
+            //var area = document.getElementById('area')
+            area.style.background = 'green'
+            area.innerText = 'Saiu!'
+        }
+
+    </script>
+
+    <script>
+
+        var area_2 = document.getElementById('area_2')
+
+        area_2.addEventListener('click', clicar_2)
+        area_2.addEventListener('mouseenter', entrar_2)
+        area_2.addEventListener('mouseout', sair_2)
+
+        function clicar_2(){
+            // Comentários
+            //var area = document.getElementById('area')
+            area_2.style.background = 'red'
+            area_2.innerText = 'Clicou!'
+        }
+
+        function entrar_2(){
+            //var area = document.getElementById('area')
+            area_2.style.background = 'purple'
+            area_2.innerText = 'Entrou!'
+        }
+    
+        function sair_2(){
+            //var area = document.getElementById('area')
+            area_2.style.background = 'green'
+            area_2.innerText = 'Saiu!'
+        }
+
+    </script>
+  
+</body>
+</html>
