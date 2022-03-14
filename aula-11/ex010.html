@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Condições</title>
+    <style>
+        div#verificacao{
+            margin-top: 30px;
+        }
+        div#verificacao_2{
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Sistema de Multas</h1>
+
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h 
+    <input type="button" value="Verificar" onclick="verificar()">
+    <br>
+    <div id="verificacao"></div>
+
+    <hr>
+
+    <h1>Sistema de Cidadania</h1>
+
+    Meu país: <input type="text" name="txtpais" id="txtpais"> 
+    <input type="button" value="Verificar" onclick="verificar_2()">
+    <br>
+    <div id="verificacao_2"></div>
+
+
+
+    <script>
+
+        function verificar() {
+
+            // Obtendo os valores do input
+            var ivel = document.getElementById('txtvel')
+            
+            // Convertendo os valores do input para Number
+            var vel = Number(ivel.value)
+
+            // Inputando o resultado no DOM
+            var verificacao = document.getElementById('verificacao')
+            
+            verificacao.innerHTML = `<p>A velocidade do seu carro é ${vel} km/h</p>`
+
+            if (vel > 60){ // condição simples
+                verificacao.innerHTML += `<p>Você ultrapassou a velocidade permitida. <strong>Multado</strong>!</p>`
+            }
+            
+            verificacao.innerHTML += `<p>Dirija sempre usando o <u>cinto de segurança</u>!</p>`
+
+        }
+
+    </script>
+
+    <script>
+
+        function verificar_2() {
+
+            // Obtendo os valores do input
+            var pais = document.getElementById('txtpais').value
+            
+            // Inputando o resultado no DOM
+            var verificacao_2 = document.getElementById('verificacao_2')
+            
+            verificacao_2.innerHTML = `Vivendo em ${pais}.`
+
+            if (pais == 'Brasil'){
+                verificacao_2.innerHTML += `<p>Você é <strong>Brasileiro</strong>!</p>`
+            } else {
+                verificacao_2.innerHTML += `<p>Você é <strong>Estrangeiro</strong>!</p>`
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>
